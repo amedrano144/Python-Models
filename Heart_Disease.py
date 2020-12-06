@@ -91,8 +91,8 @@ for i in range(len(data)):
 '''
 
 # convert dataframe to array and split data
-X = df.loc[:, df.columns != 'num'].to_numpy()
-y = df['num'].to_numpy()
+X = filtered_df.loc[:, filtered_df.columns != 'num'].to_numpy()
+y = filtered_df['num'].to_numpy()
 X_train, X_test, y_train, y_test = train_test_split(X , y, test_size = 0.1)
 
 
